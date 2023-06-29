@@ -32,7 +32,7 @@ RUN --mount=type=secret,id=secret_key \
 # Update repos before installing packages
     apt-get update && \
 # Install dependencies of installer of Collabora Online
-    apt-get -y install cpio tzdata libcap2-bin apt-transport-https gnupg2 ca-certificates curl && \
+    apt-get -y install cpio tzdata libcap2-bin fonts-open-sans apt-transport-https gnupg2 ca-certificates curl && \
 # Setup Collabora repo
     repourl="https://collaboraoffice.com/${repo:-repos}/CollaboraOnline/"; \
     secret_key=$(cat /run/secrets/secret_key); \
